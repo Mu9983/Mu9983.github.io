@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Tags: Git | 幕 のBlog</title>
+    <title>一些常用的linux命令行命令 | 幕 のBlog</title>
     <meta name="author" content="Mu9983" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -37,6 +37,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -150,81 +154,178 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
+            <div class="article">
+    <div>
+        <h1>一些常用的linux命令行命令</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/1/17
+        </span>
         
-        
-        
-        <span>
-            <a href="/tags/Git/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+        <span class="category">
+            <a href="/categories/%E5%AD%A6%E4%B9%A0/">
                 <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                Git
+                学习
             </a>
         </span>
         
         
-        
-        
-        
-        <span>
-            <a href="/tags/GitHub/" style="background: #03a9f4">
-                <span class="icon">
-                    <i class="fa-solid fa-tags fa-fw"></i>
-                </span>
-                GitHub
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/linux/" style="color: #00a596">
+                    linux
+                </a>
+            </span>
+            
         </span>
-        
         
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2025/1/17</div>
-            <a href="/2025/01/17/newpapername/">
-                <h3>学习git的心得</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E5%AD%A6%E4%B9%A0/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        学习
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/Git/" style="color: #ffa2c4">
-                            Git
-                        </a>
-                    </span>
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/GitHub/" style="color: #03a9f4">
-                            GitHub
-                        </a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p><strong>通过前三天的学习，基本掌握了一些<code>linux</code>命令行命令，以下是一些较为常用的命令</strong></p>
+<p><strong>1. 文件和目录操作</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>ls</code></td>
+<td align="left">列出目录内容</td>
+</tr>
+<tr>
+<td align="left"><code>ls -l</code></td>
+<td align="left">以详细列表形式显示目录内容</td>
+</tr>
+<tr>
+<td align="left"><code>ls -a</code></td>
+<td align="left">显示所有文件（包括隐藏文件）</td>
+</tr>
+<tr>
+<td align="left"><code>cd &lt;目录&gt;</code></td>
+<td align="left">切换目录</td>
+</tr>
+<tr>
+<td align="left"><code>pwd</code></td>
+<td align="left">显示当前工作目录</td>
+</tr>
+<tr>
+<td align="left"><code>mkdir &lt;目录名&gt;</code></td>
+<td align="left">创建新目录</td>
+</tr>
+<tr>
+<td align="left"><code>rmdir &lt;目录名&gt;</code></td>
+<td align="left">删除空目录</td>
+</tr>
+<tr>
+<td align="left"><code>touch &lt;文件名&gt;</code></td>
+<td align="left">创建空文件或更新文件时间戳</td>
+</tr>
+<tr>
+<td align="left"><code>cp &lt;源文件&gt; &lt;目标&gt;</code></td>
+<td align="left">复制文件或目录</td>
+</tr>
+<tr>
+<td align="left"><code>mv &lt;源文件&gt; &lt;目标&gt;</code></td>
+<td align="left">移动或重命名文件或目录</td>
+</tr>
+<tr>
+<td align="left"><code>rm &lt;文件&gt;</code></td>
+<td align="left">删除文件</td>
+</tr>
+<tr>
+<td align="left"><code>rm -r &lt;目录&gt;</code></td>
+<td align="left">递归删除目录及其内容</td>
+</tr>
+<tr>
+<td align="left"><code>echo &quot;内容&quot; &gt; &lt;文件&gt;</code></td>
+<td align="left">写入文件内容</td>
+</tr>
+<tr>
+<td align="left"><code>cat &lt;文件&gt;</code></td>
+<td align="left">显示文件内容</td>
+</tr>
+</tbody></table>
+<p><strong>2. 文件压缩和解压</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>tar -cvf &lt;文件名.tar&gt; &lt;目录&gt;</code></td>
+<td align="left">创建 tar 归档文件</td>
+</tr>
+<tr>
+<td align="left"><code>tar -xvf &lt;文件名.tar&gt;</code></td>
+<td align="left">解压 tar 归档文件</td>
+</tr>
+</tbody></table>
+<p><strong>3. 快捷键</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>Ctrl + C</code></td>
+<td align="left">终止当前命令</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + Z</code></td>
+<td align="left">暂停当前命令</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + D</code></td>
+<td align="left">退出当前终端</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + L</code></td>
+<td align="left">清屏</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + A</code></td>
+<td align="left">将光标移动到行首</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + E</code></td>
+<td align="left">将光标移动到行尾</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl + R</code></td>
+<td align="left">搜索命令历史记录</td>
+</tr>
+<tr>
+<td align="left"><code>Tab</code></td>
+<td align="left">自动补全命令或文件名</td>
+</tr>
+</tbody></table>
+
     </div>
+    
+    
+    
+    
+    
+    
     
 </div>
 
@@ -256,6 +357,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
