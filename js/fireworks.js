@@ -1,26 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
     class Fireworks {
         constructor() {
+            // ���� canvas Ԫ�ز����ӵ�ҳ����
             this.canvas = document.createElement('canvas');
             document.body.appendChild(this.canvas);
             this.ctx = this.canvas.getContext('2d');
 
+            // ���� canvas �ߴ�
             this.canvas.width = window.innerWidth;
             this.canvas.height = window.innerHeight;
 
+            // ��ʼ�������������ɫ
             this.particles = [];
             this.hue = 120;
 
+            // �������ڴ�С�仯������ canvas �ߴ�
             window.addEventListener('resize', () => {
                 this.canvas.width = window.innerWidth;
                 this.canvas.height = window.innerHeight;
             });
 
+            // ���ӵ���¼�������
             document.addEventListener('click', (e) => {
+                console.log('Click event triggered', e.clientX, e.clientY);
                 this.createFirework(e.clientX, e.clientY);
             });
+
+            // ��������ѭ��
+            this.animate();
         }
 
+        // �����̻�Ч��
         createFirework(x, y) {
             const particleCount = 100;
             for (let i = 0; i < particleCount; i++) {
@@ -28,7 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        // ����ѭ��
         animate() {
+            console.log('Animation frame');
             this.ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
             this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
@@ -45,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // ������
     class Particle {
         constructor(x, y, hue) {
             this.x = x;
@@ -57,12 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
             this.alpha = 1;
         }
 
+        // ��������λ��
         update() {
             this.x += this.speedX;
             this.y += this.speedY;
             this.alpha -= 0.01;
         }
 
+        // ��������
         draw(ctx) {
             ctx.save();
             ctx.globalAlpha = this.alpha;
@@ -74,6 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // ��ʼ���̻�Ч��
     const fireworks = new Fireworks();
-    fireworks.animate();
 });
